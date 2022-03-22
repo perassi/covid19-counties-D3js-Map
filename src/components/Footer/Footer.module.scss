@@ -1,0 +1,19 @@
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: calc(100% - 40px);
+  color: #fff;
+  margin-left: 20px;
+}
+
+@media all and (max-width: 768px) {
+  .footer {
+    position: relative;
+    margin-top: 20px;
+
+    > div {
+      flex-direction: column;
+      align-items: flex-start !important;
+    }
+  }
+}

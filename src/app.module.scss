@@ -1,0 +1,278 @@
+.app {
+    background-color: #333;
+    height: calc(100% - 57px);
+}
+
+.header {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 32px 16px;
+    flex-direction: column;
+    text-align: center;
+
+    h1 {
+        font-weight: 600;
+        font-size: 36px;
+        color: #D9CB9E;
+    }
+
+    p {
+        margin: 0;
+    }
+}
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 20px;
+}
+
+.spacer {
+    margin-top: 8px;
+}
+
+.infoBlock {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    width: 300px;
+
+    &Header {
+        justify-content: center;
+        font-size: 18px !important;
+        text-transform: uppercase;
+        color: #D9CB9E !important;
+        &:nth-child(n+2) {
+            margin-top: 10px;
+        }
+    }
+
+    .switch {
+        display: flex;
+        justify-content: flex-start;
+        width: 100%;
+        margin: 16px 0;
+    }
+    .searchBlock {
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        border-radius: 4px;
+        width: 100%;
+        overflow: hidden;
+
+        svg  {
+            color: #000;
+            height: 16px;
+            width: 16px;
+            margin: 8px 16px;
+        }
+    }
+}
+
+.countyInfo {
+    border-top: 2px solid #0d99ce;
+    width: 100%;
+    line-height: 1.2;
+    div {
+        color: #ebebeb;
+        font-size: 16px;
+        font-weight: bold;
+        .orangeValue {
+            color: #e7722d;
+        }
+        .redValue {
+            color:#ff0000;
+        }
+        display: flex;
+
+        span {
+            display: block;
+
+            &:first-child {
+                text-align: right;
+                flex: 2;
+                margin-right: 5px;
+            }
+
+            &:last-child {
+                flex: 1;
+            }
+        }
+    }
+
+    .stateName {
+        color: #0d99ce;
+        font-size: 30px;
+    }
+}
+
+.contentWrapper {
+    justify-self: center;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    flex: 1;
+    margin-left: 20px;
+}
+
+.map {
+    width: 100%;
+    height: 500px;
+}
+
+.map, .chartContainer {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.chartContainer {
+    height: 90%;
+    width: 47%;
+    canvas {
+        max-height: 100%;
+    }
+}
+
+.charts {
+    display: flex;
+    margin-top: 5px;
+    .chartContainer {
+        > div {
+            width: 100%;
+        }
+        background-color: #000;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    span {
+        font-family: "Archivo Narrow", sans-serif;
+        color: #e5e5e5;
+        &:nth-child(2) {
+            font-size: 12px;
+        }
+    }
+    svg {
+        width: 100%;
+        font: 10px 'Archivo Narrow';
+    }
+}
+
+.updatedAt {
+    font-style: italic;
+    font-size: 16px;
+    color: #d9cb9e;
+    margin-bottom: 15px;
+}
+
+.underlined {
+    font-weight: 200;
+    color: #F6F902;
+}
+
+.footnote {
+    display: flex;
+    justify-content: center;
+    color: #f5f5f5;
+    font-style: italic;
+    font-size: 15px;
+    letter-spacing: 0.2px;
+    margin-top: 15px;
+}
+
+@media all and (max-width: 768px) {
+    .app {
+        height: auto;
+    }
+
+    .countyInfo {
+        margin-bottom: 20px;
+        div {
+            margin-top: 5px;
+            color: #ebebeb;
+            font-size: 12px;
+            font-weight: bold;
+            .orangeValue {
+                color: #e7722d;
+            }
+
+            span {
+                display: block;
+
+                &:first-child {
+                    text-align: right;
+                    flex: 1;
+                    margin-right: 5px;
+                }
+
+                &:last-child {
+                    flex: 1;
+                }
+            }
+        }
+        .stateName {
+            color: #0d99ce;
+            font-size: 18px;
+        }
+    }
+
+    .wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contentWrapper {
+        width: 100%;
+        height: 850px;
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .map {
+        width: 100%;
+        height: 50%;
+    }
+
+    .charts {
+        height: auto;
+        flex-direction: column;
+        width: 100% !important;
+        .barContainer {
+            width: 100%;
+        }
+        svg {
+            font: 8px "Archivo Narrow" !important;
+        }
+    }
+
+    .infoBlockHeader {
+        &:nth-child(n+2) {
+            margin-top: 5px;
+        }
+        font-size: 14px !important;
+    }
+
+    .header {
+        justify-content: center;
+        div {
+            font-size: 15px;
+            margin: 0;
+        }
+    }
+
+    .chartContainer {
+        width: 100% !important;
+        height: 100%;
+        canvas {
+            max-height: none;
+            margin: 10px 0 0 0;
+        }
+    }
+
+}

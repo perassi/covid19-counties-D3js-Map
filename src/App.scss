@@ -1,0 +1,122 @@
+* {
+  font-family: 'Archivo Narrow', sans-serif;
+}
+
+.legend {
+  line-height: 18px;
+  color: #555;
+  i {
+    width: 15px;
+    height: 15px;
+    float: left;
+    margin-right: 8px;
+    opacity: 0.7;
+  }
+}
+
+.info {
+  padding: 6px 8px;
+  font: 14px/16px Arial, Helvetica, sans-serif;
+  background: white;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+
+
+  h4 {
+    margin: 0 0 5px;
+    color: #777;
+  }
+}
+
+.ant-switch {
+  height: 25px !important;
+}
+
+.ant-switch-inner {
+  font-size: 14px !important;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.ant-select-selector {
+  border: 0 !important;
+}
+
+.ant-switch::after {
+  -webkit-border-radius: 100% !important;
+  -moz-border-radius: 100% !important;
+  border-radius: 100% !important;
+  height: 20px !important;
+}
+
+.btn-group-center {
+  text-align: center;
+}
+
+.btn-group {
+  .btn {
+    color: #fff;
+    background-color: #6c757d;
+    border-color: #6c757d;
+    outline: none;
+    cursor: pointer;
+
+    &.btn-selected {
+      background-color: #e75139;
+      border-color: #e75139;
+    }
+  }
+}
+
+canvas {
+  background-color: transparent;
+  margin-left: 5px;
+}
+
+.c3-legend-item {
+  fill: whitesmoke;
+}
+
+.calcType {
+  &.ant-switch {
+    background-color: #f5f5f5;
+
+    .ant-switch-inner {
+      color: #000;
+    }
+  }
+  &.ant-switch-checked {
+    background-color: #F5F5F5;
+
+    .ant-switch-inner {
+      color: #000;
+    }
+  }
+}
+
+.c3 text {
+  font-family: "Archivo Narrow", sans-serif;
+}
+
+.c3-legend-background {
+  fill: transparent;
+  stroke: transparent;
+}
+
+.c3-axis-y-label, .c3-axis-x-label {
+  fill: whitesmoke;
+  font-size: 14px;
+}
+
+.c3-axis-x text, .c3-axis-y text {
+  letter-spacing: 0.2px;
+}
+
+.c3 path, .c3 line {
+  stroke: whitesmoke;
+}
+
+.tick text {
+  fill: whitesmoke;
+}

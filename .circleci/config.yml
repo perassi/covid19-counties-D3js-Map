@@ -1,0 +1,27 @@
+version: 2
+jobs:
+  build:
+    branches:
+      only:
+        - develop
+    docker:
+      - image: circleci/node:10
+    steps:
+      - checkout
+      - restore_cache: # special step to restore the dependency cache
+          key: dependency-cache-{{ checksum "package.json" }}
+      - run:
+          name: "Setup Dependencies"
+          command: yarn
+      - run:
+          name: "Build app"
+          command: yarn ci
+      - add_ssh_keys:
+          fingerprints:
+            - "65:ba:54:66:c4:c7:7e:a4:07:87:d7:60:d3:2d:15:62"
+      - run:
+          name: "SSH Keyscan"
+          command: ssh-keyscan 54.70.209.151 >> ~/.ssh/known_hosts
+      - run:
+          name: "Deploy to EC2"
+          command: chmod +x ./scripts/deploy.sh && ./scripts/deploy.sh
