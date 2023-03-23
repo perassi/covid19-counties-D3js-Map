@@ -15,7 +15,7 @@ export default () => {
         </small>*/}
         <div>
           <FontAwesomeIcon icon="copyright" size="sm" />
-          &nbsp;<small>2020 <a target="_blank" rel="noopener noreferrer" href="/">Horacio Perassi</a> All Rights Reserved.</small>
+          &nbsp;<small>2020 <a target="_blank" rel="noopener noreferrer" href="/">Rare Ramos</a> All Rights Reserved.</small>
         </div>
       </div>
     </footer>
